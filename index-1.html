@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>TeaChat AI — Talk. Order. Enjoy.</title>
+<meta name="description" content="TeaChat AI - Chat with our tea shop assistant and get your favorite tea parcel delivered.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- floating background blobs -->
+<div class="bg-blob blob1"></div>
+<div class="bg-blob blob2"></div>
+<div class="bg-blob blob3"></div>
+
+<div id="app">
+
+  <!-- ===================== SCREEN 1 : WELCOME ===================== -->
+  <section id="screen-welcome" class="screen active">
+    <div class="glass-card welcome-card">
+      <div class="logo-orb">☕</div>
+      <h1 class="brand-title">TeaChat <span>AI</span></h1>
+      <p class="brand-tagline">Talk. Order. Enjoy. ✨</p>
+
+      <p class="lang-prompt">Choose your language / மொழியைத் தேர்வு செய்யவும்</p>
+
+      <div class="lang-buttons">
+        <button class="lang-btn" data-lang="en">
+          <span class="flag">🇬🇧</span>
+          <span>English</span>
+        </button>
+        <button class="lang-btn" data-lang="ta">
+          <span class="flag">🇮🇳</span>
+          <span>தமிழ்</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SCREEN 2 : NAME ===================== -->
+  <section id="screen-name" class="screen">
+    <div class="glass-card name-card">
+      <div class="logo-orb small">👋</div>
+      <h2 id="namePromptText" class="name-prompt">Please enter your name</h2>
+      <input type="text" id="nameInput" class="name-input" placeholder="Kannan" autocomplete="off">
+      <button id="nameContinueBtn" class="primary-btn">Continue 🚀</button>
+    </div>
+  </section>
+
+  <!-- ===================== SCREEN 3 : CHAT ===================== -->
+  <section id="screen-chat" class="screen">
+    <div class="chat-shell">
+
+      <header class="chat-header">
+        <div class="avatar-wrap">
+          <div class="avatar">☕</div>
+          <span class="online-dot"></span>
+        </div>
+        <div class="header-info">
+          <div class="header-name">Velpaari Tea Buddy</div>
+          <div class="header-status" id="headerStatus">Online 🟢</div>
+        </div>
+        <div class="cart-pill" id="cartPill">
+          🛍️ <b id="cartCount">0</b>
+        </div>
+      </header>
+
+      <div class="chat-area" id="chatArea"></div>
+
+      <div id="chipsHost" class="chips-host"></div>
+
+      <div class="input-bar">
+        <input type="text" id="textInput" class="chat-text-input" placeholder="Type here…" autocomplete="off">
+        <button id="sendBtn" class="send-fab" aria-label="Send">
+          <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- confetti canvas layer -->
+<div id="confettiLayer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
